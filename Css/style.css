@@ -1,7 +1,7 @@
-body{
-    height: 4000px;
-}
 
+html{
+    scroll-behavior: smooth;
+}
 
 
 .hero_heading{
@@ -18,7 +18,7 @@ body{
     transform: translateY(-50%);
 }
 
-.slider-dots button{
+.slider-dots button,.slider2-dots button{
     font-size: 0;
     width: 8px;
     height: 8px;
@@ -27,7 +27,7 @@ body{
     outline: none;
 }
 
-.slider-dots li.slick-active button{
+.slider-dots li.slick-active button,.slider2-dots li.slick-active button{
     background: #fe7865;
     width: 12px;
     height: 12px;
@@ -101,5 +101,81 @@ body{
 .box-5 img{
     position: absolute;
     bottom: -2rem;
+   
 }
 
+
+.agree__checkbox + label{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: white;
+    position: relative;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+.agree__checkbox + label::before{
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+
+}
+
+.agree__checkbox:checked + label::before{
+    background: #fe7865;
+}
+
+
+.slick-slide.slick-center .inner-box{
+    padding: 0 20px;
+}
+
+.slider2{
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+.slick-slide.slick-center .inner-box > div{
+    padding: 50px 0;
+}
+
+.slick-slide:not(.slick-center){
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.slick-slider .inner-box .label ,.slick-slider .inner-box .number{
+    display: none;
+
+}
+
+.slick-slide.slick-center .inner-box .label ,.slick-slide.slick-center .inner-box .number{
+    display: block;
+}
+
+.slider2-dots{
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider2-dots ul{
+    display: flex;
+    align-items: center;
+
+}
+
+
+.slider2-dots ul li{
+    margin-right: 20px;
+}
